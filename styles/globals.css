@@ -7408,3 +7408,22 @@ h6,
   background-repeat: no-repeat;
   background-size: cover;
 }
+.overlay-top::before,
+.overlay-bottom::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 15px;
+  left: 0;
+  z-index: 1;
+}
+
+.overlay-top::before {
+  top: -1px;
+  background: url(../public/images/overlay-top.png);
+}
+
+.overlay-bottom::after {
+  bottom: -1px;
+  background: url(../public/images/overlay-bottom.png);
+}
