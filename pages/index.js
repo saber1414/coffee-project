@@ -7,18 +7,31 @@ import React from "react";
 import Reservation from "@/components/templates/Index/Reservation";
 import Testimonial from "@/components/templates/Index/Testimonial";
 
-const Index = () => {
+const Index = ({ services, menus }) => {
   return (
     <>
       <Slider />
       <About />
-      <Services />
+      <Services services={services} />
       <Offer />
-      <Menu />
+      <Menu menus={menus} />
       <Reservation />
       <Testimonial />
     </>
   );
 };
+
+export const getStaticProps = async () => {
+  const res = await fetch("http://localhost:4000/services");
+  const data = await res.json();
+
+  const menuRes = await fetch("http://localhost:4000/pricing");
+  const result = await menuRes.json()
+
+  return {
+    props: { services: data, menus: result },
+    revalidate: 60 * 60 * 12
+  }
+}
 
 export default Index;

@@ -1,16 +1,7 @@
 import React from "react";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAward,
-  faCoffee,
-  faTable,
-  faTruck,
-} from "@fortawesome/free-solid-svg-icons";
-config.autoAddCss = false;
+import ServiceItem from "@/components/modules/ServiceItem/ServiceItem";
 
-const Services = () => {
+const Services = ({ services }) => {
   return (
     <>
       <div className="container-fluid pt-5">
@@ -25,102 +16,15 @@ const Services = () => {
             <h1 className="display-4">Fresh & Organic Beans</h1>
           </div>
           <div className="row">
-            <div className="col-lg-6 mb-5">
-              <div className="row align-items-center">
-                <div className="col-sm-5">
-                  <img
-                    className="img-fluid mb-3 mb-sm-0"
-                    src="/images/service-1.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="col-sm-7">
-                  <h4>
-                    <div className="service-icon">
-                      <FontAwesomeIcon icon={faTruck} />
-                    </div>
-                    Fastest Door Delivery
-                  </h4>
-                  <p className="m-0">
-                    Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea
-                    et et lorem dolor sed est sit invidunt, dolore tempor diam
-                    ipsum takima erat tempor
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-5">
-              <div className="row align-items-center">
-                <div className="col-sm-5">
-                  <img
-                    className="img-fluid mb-3 mb-sm-0"
-                    src="/images/service-2.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="col-sm-7">
-                  <h4>
-                    <div className="service-icon">
-                      <FontAwesomeIcon icon={faCoffee} />
-                    </div>
-                    Fresh Coffee Beans
-                  </h4>
-                  <p className="m-0">
-                    Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea
-                    et et lorem dolor sed est sit invidunt, dolore tempor diam
-                    ipsum takima erat tempor
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-5">
-              <div className="row align-items-center">
-                <div className="col-sm-5">
-                  <img
-                    className="img-fluid mb-3 mb-sm-0"
-                    src="/images/service-3.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="col-sm-7">
-                  <h4>
-                    <div className="service-icon">
-                      <FontAwesomeIcon icon={faAward} />
-                    </div>
-                    Best Quality Coffee
-                  </h4>
-                  <p className="m-0">
-                    Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea
-                    et et lorem dolor sed est sit invidunt, dolore tempor diam
-                    ipsum takima erat tempor
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 mb-5">
-              <div className="row align-items-center">
-                <div className="col-sm-5">
-                  <img
-                    className="img-fluid mb-3 mb-sm-0"
-                    src="/images/service-4.jpg"
-                    alt=""
-                  />
-                </div>
-                <div className="col-sm-7">
-                  <h4>
-                    <div className="service-icon">
-                      <FontAwesomeIcon icon={faTable} />
-                    </div>
-                    Online Table Booking
-                  </h4>
-                  <p className="m-0">
-                    Sit lorem ipsum et diam elitr est dolor sed duo. Guberg sea
-                    et et lorem dolor sed est sit invidunt, dolore tempor diam
-                    ipsum takima erat tempor
-                  </p>
-                </div>
-              </div>
-            </div>
+            {services.map((service) => (
+              <ServiceItem
+                key={service.id}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                img={service.image}
+              />
+            ))}
           </div>
         </div>
       </div>
