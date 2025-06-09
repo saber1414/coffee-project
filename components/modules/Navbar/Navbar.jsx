@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "@/styles/Navbar.module.css";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+  const router = useRouter();
+
   return (
     <>
       <div className={`container-fluid p-0 ${styles.nav_bar}`}>
@@ -27,38 +30,53 @@ const Navbar = () => {
             id="navbarCollapse"
           >
             <div className={`${styles.navbar_nav} ml-auto p-4`}>
-              <Link href="/" className={`${styles.nav_link} ${styles.active_nav_link}`}>
-                Home
-              </Link>
-              <Link href="/about" className={`${styles.nav_link}`}>
-                About
-              </Link>
-              <Link href="/services" className={`${styles.nav_link}`}>
-                Service
-              </Link>
-              <Link href="/menu" className={`${styles.nav_link}`}>
-                Menu
-              </Link>
+              {[
+                { href: "/", label: "Home" },
+                { href: "/about", label: "About" },
+                { href: "/services", label: "Service" },
+                { href: "/menu", label: "Menu" },
+                { href: "/contact", label: "Contact" },
+              ].map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className={`${styles.nav_link} ${
+                    router.pathname === href ? styles.active_nav_link : ""
+                  }`}
+                >
+                  {label}
+                </Link>
+              ))}
               <div className={`${styles.dropdown}`}>
                 <a
                   href="#"
-                  className={`${styles.nav_link} ${styles.dropdown_toggle}`}
+                  className={`${styles.nav_link} ${styles.dropdown_toggle} ${
+                    router.pathname.includes("reservation") ||
+                    router.pathname.includes("testimonial")
+                      ? styles.active_nav_link
+                      : ""
+                  }`}
                   data-toggle="dropdown"
                 >
                   Pages
                 </a>
                 <div className={`${styles.dropdown_menu} text-capitalize`}>
-                  <Link href="/reservation" className={`${styles.dropdown_item}`}>
-                    Reservation
-                  </Link>
-                  <Link href="/testimonial" className={`${styles.dropdown_item}`}>
-                    Testimonial
-                  </Link>
+                  {[
+                    { href: "/reservation", label: "Reservation" },
+                    { href: "/testimonial", label: "Testimonial" },
+                  ].map(({ href, label }) => (
+                    <Link
+                      key={href}
+                      href={href}
+                      className={`${styles.dropdown_item} ${
+                        router.pathname === href ? styles.active_nav_link : ""
+                      }`}
+                    >
+                      {label}
+                    </Link>
+                  ))}
                 </div>
               </div>
-              <Link href="/contact" className={`${styles.nav_link}`}>
-                Contact
-              </Link>
             </div>
           </div>
         </nav>

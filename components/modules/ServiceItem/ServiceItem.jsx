@@ -5,13 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Icons from "@fortawesome/free-solid-svg-icons";
 config.autoAddCss = false;
 
-const ServiceItem = ({ title, description, img, icon }) => {
+const ServiceItem = ({ title, description, image, icon }) => {
   return (
     <>
       <div className="col-lg-6 mb-5">
         <div className="row align-items-center">
           <div className="col-sm-5">
-            <img className="img-fluid mb-3 mb-sm-0" src={img} alt="" />
+            <img className="img-fluid mb-3 mb-sm-0" src={image} alt="" />
           </div>
           <div className="col-sm-7">
             <h4>

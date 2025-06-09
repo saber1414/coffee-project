@@ -18,25 +18,21 @@ const Menu = ({ menus }) => {
           <div className="row">
             <div className="col-lg-6">
               <h1 className="mb-5">Hot Coffee</h1>
-              {menus.slice(0, 3).map((menu) => (
-                <MenuItem
-                  key={menu.id}
-                  title={menu.title}
-                  price={menu.price}
-                  image={menu.image}
-                />
-              ))}
+              {menus
+                .filter((item) => item.type === "hot")
+                .slice(0, 3)
+                .map((menu) => (
+                  <MenuItem {...menu} />
+                ))}
             </div>
             <div className="col-lg-6">
               <h1 className="mb-5">Cold Coffee</h1>
-              {menus.slice(0, 3).map((menu) => (
-                <MenuItem
-                  key={menu.id}
-                  title={menu.title}
-                  price={menu.price}
-                  image={menu.image}
-                />
-              ))}
+              {menus
+                .filter((item) => item.type === "cold")
+                .slice(0, 3)
+                .map((menu) => (
+                  <MenuItem {...menu} />
+                ))}
             </div>
           </div>
         </div>

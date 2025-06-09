@@ -1,13 +1,13 @@
 import React from "react";
 
-const MenuItem = ({ id, title, image, description, price }) => {
+const MenuItem = ({ id, title, img, description, price }) => {
   return (
     <>
       <div className="row align-items-center mb-5">
         <div className="col-4 col-sm-3">
           <img
             className="w-100 rounded-circle mb-3 mb-sm-0"
-            src={image}
+            src={img}
             alt=""
           />
           <h5 className="menu-price">${price}</h5>

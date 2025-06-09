@@ -17,13 +17,7 @@ const Services = ({ services }) => {
           </div>
           <div className="row">
             {services.map((service) => (
-              <ServiceItem
-                key={service.id}
-                title={service.title}
-                description={service.description}
-                icon={service.icon}
-                img={service.image}
-              />
+              <ServiceItem {...service}/>
             ))}
           </div>
         </div>

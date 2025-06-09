@@ -34,43 +34,90 @@
       "id": 1,
       "title": "Black Coffee",
       "price": 5,
-      "description": " Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "image": "/images/menu-1.jpg"
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 5,
+      "off": 0,
+      "type": "cold",
+      "img": "/images/menu-1.jpg"
     },
     {
       "id": 2,
-      "title": "Chocolete Coffee",
-      "price": 7,
-      "description": " Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "image": "/images/menu-2.jpg"
+      "title": "Hot Chocolete",
+      "price": 4,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 4.4,
+      "off": 0,
+      "type": "hot",
+      "img": "/images/menu-2.jpg"
     },
     {
       "id": 3,
-      "title": "Coffee With Milk",
-      "price": 9,
-      "description": " Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "image": "/images/menu-3.jpg"
+      "title": "Ice Cream",
+      "price": 6,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 4.9,
+      "off": 0,
+      "type": "cold",
+      "img": "/images/menu-3.jpg"
     },
     {
       "id": 4,
-      "title": "Black Coffee",
-      "price": 5,
-      "description": " Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "image": "/images/menu-1.jpg"
+      "title": "Tea",
+      "price": 3,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 5,
+      "off": 0,
+      "type": "hot",
+      "img": "/images/menu-4.jpeg"
     },
     {
       "id": 5,
-      "title": "Chocolete Coffee",
-      "price": 7,
-      "description": " Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "image": "/images/menu-2.jpg"
+      "title": "Chocolate Milk",
+      "price": 4,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 4.8,
+      "off": 0,
+      "type": "hot",
+      "img": "/images/menu-5.jpeg"
     },
     {
       "id": 6,
-      "title": "Coffee With Milk",
-      "price": 9,
-      "description": " Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
-      "image": "/images/menu-3.jpg"
+      "title": "Banana Milk",
+      "price": 12,
+      "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
+      "score": 4.9,
+      "off": 0,
+      "type": "cold",
+      "img": "/images/menu-6.jpeg"
+    }
+  ],
+  "newsLetters": [
+    {
+      "id": "0baa",
+      "email": "saber.esmaili1414@gmail.com"
+    },
+    {
+      "id": "c204",
+      "email": "amin@gmail.com"
+    }
+  ],
+  "reservation": [
+    {
+      "id": "fa68",
+      "name": "saber",
+      "email": "saber.esmaili@gmail.com",
+      "date": "5025/6/15",
+      "time": "20:30",
+      "person": "2"
+    }
+  ],
+  "contactUs": [
+    {
+      "id": "9961",
+      "name": "saber__dev",
+      "email": "saber.esmaili1414@gmail.com",
+      "subject": "bug successfully",
+      "message": "please fix bug"
     }
   ]
 }
