@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,9 +9,30 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import Swal from "sweetalert2";
 config.autoAddCss = false;
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const submitBtnHandler = async (e) => {
+    e.preventDefault();
+    const res = await fetch("http://localhost:4000/newsLetters", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+
+    if (res.ok) {
+      Swal.fire({
+        icon: "success",
+        title: "success",
+        text: "You have successfully subscribed to the newsletter",
+      });
+      setEmail("");
+    }
+  };
+
   return (
     <>
       <div className="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
@@ -25,8 +46,7 @@ const Footer = () => {
             </h4>
             <p>
               <FontAwesomeIcon icon={faMap} className="pr-2" />
-              123 Street, New York,
-              USA
+              123 Street, New York, USA
             </p>
             <p>
               <FontAwesomeIcon icon={faPhone} className="pr-2" />
@@ -105,10 +125,17 @@ const Footer = () => {
                   className="form-control border-light"
                   style={{ padding: "25px" }}
                   placeholder="Your Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required="required"
                 />
                 <div className="input-group-append">
-                  <button className="btn btn-primary font-weight-bold px-3">
-                    Sign Up
+                  <button
+                    type="submit"
+                    onClick={submitBtnHandler}
+                    className="btn btn-primary font-weight-bold px-3"
+                  >
+                    Join
                   </button>
                 </div>
               </div>

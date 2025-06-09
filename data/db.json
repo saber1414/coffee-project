@@ -1,28 +1,28 @@
 {
   "services": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Fastest Door Delivery",
       "image": "/images/service-1.jpg",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg seaet et lorem dolor sed est sit invidunt, dolore tempor diamipsum takima erat tempor",
       "icon": "faTruck"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Fresh Coffee Beans",
       "image": "/images/service-2.jpg",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg seaet et lorem dolor sed est sit invidunt, dolore tempor diamipsum takima erat tempor",
       "icon": "faCoffee"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Best Quality Coffee",
       "image": "/images/service-3.jpg",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg seaet et lorem dolor sed est sit invidunt, dolore tempor diamipsum takima erat tempor",
       "icon": "faAward"
     },
     {
-      "id": 1,
+      "id": "1",
       "title": "Online Table Booking",
       "image": "/images/service-4.jpg",
       "description": "Sit lorem ipsum et diam elitr est dolor sed duo. Guberg seaet et lorem dolor sed est sit invidunt, dolore tempor diamipsum takima erat tempor",
@@ -31,7 +31,7 @@
   ],
   "pricing": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Black Coffee",
       "price": 5,
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
@@ -41,7 +41,7 @@
       "img": "/images/menu-1.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Hot Chocolete",
       "price": 4,
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
@@ -51,7 +51,7 @@
       "img": "/images/menu-2.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Ice Cream",
       "price": 6,
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
@@ -61,7 +61,7 @@
       "img": "/images/menu-3.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Tea",
       "price": 3,
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
@@ -71,7 +71,7 @@
       "img": "/images/menu-4.jpeg"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Chocolate Milk",
       "price": 4,
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
@@ -81,7 +81,7 @@
       "img": "/images/menu-5.jpeg"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Banana Milk",
       "price": 12,
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
@@ -99,6 +99,10 @@
     {
       "id": "c204",
       "email": "amin@gmail.com"
+    },
+    {
+      "id": "a090",
+      "email": "ali@gmail.com"
     }
   ],
   "reservation": [
@@ -106,9 +110,17 @@
       "id": "fa68",
       "name": "saber",
       "email": "saber.esmaili@gmail.com",
-      "date": "5025/6/15",
+      "date": "5025/06/15",
       "time": "20:30",
       "person": "2"
+    },
+    {
+      "id": "c208",
+      "name": "ali_k10",
+      "email": "ali@gmail.com",
+      "date": "2025/09/10",
+      "time": "13:30",
+      "person": "3"
     }
   ],
   "contactUs": [
