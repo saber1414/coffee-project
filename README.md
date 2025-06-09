@@ -1,40 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+Coffee Shop Website
+A modern and responsive coffee shop website built with Next.js for the frontend and JSON Server as a mock backend. This project showcases a user-friendly interface for browsing coffee products, viewing details, and simulating a shopping experience.
+Table of Contents
 
-## Getting Started
+Features
+Technologies Used
+Prerequisites
+Installation
+Running the Project
+Project Structure
+Contributing
+License
 
-First, run the development server:
+Features
 
-```bash
+Responsive design optimized for both desktop and mobile devices
+Browse a catalog of coffee products with images, descriptions, and prices
+Product detail pages with additional information
+Mock API using JSON Server for simulating backend functionality
+Fast and SEO-friendly pages powered by Next.js
+Easy-to-navigate user interface with modern styling
+
+Technologies Used
+
+Frontend: Next.js (React Framework), Tailwind CSS (or specify your styling method)
+Backend: JSON Server (mock API)
+Build Tool: Node.js, npm
+Other: ESLint, Prettier (if applicable)
+
+Prerequisites
+Before running the project, ensure you have the following installed:
+
+Node.js (v16 or higher recommended)
+npm (usually comes with Node.js)
+Git (optional, for cloning the repository)
+
+Installation
+
+Clone the repository:git clone https://github.com/your-username/coffee-shop-website.git
+cd coffee-shop-website
+
+
+Install dependencies:npm install
+
+
+Set up the JSON Server:
+Ensure the db.json file is in the project root (or specify its location).
+Example db.json structure:{
+  "products": [
+    { "id": 1, "name": "Espresso", "price": 4.99, "description": "Rich and bold coffee", "image": "espresso.jpg" },
+    ...
+  ]
+}
+
+
+
+
+
+
+
+Running the Project
+
+Start the JSON Server:
+npm run server
+
+By default, JSON Server runs on http://localhost:3001.
+
+Start the Next.js development server:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at http://localhost:3000.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Open your browser and navigate to http://localhost:3000 to view the website.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Project Structure
+coffee-shop-website/
+├── pages/              # Next.js pages (routes)
+├── components/         # Reusable React components
+├── public/             # Static assets (images, etc.)
+├── styles/             # CSS or Tailwind styles
+├── db.json             # JSON Server mock database
+├── package.json        # Project dependencies and scripts
+└── README.md           # Project documentation
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Contributing
+Contributions are welcome! To contribute:
 
-## Learn More
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Make your changes and commit (git commit -m "Add your feature").
+Push to the branch (git push origin feature/your-feature).
+Open a pull request.
 
-To learn more about Next.js, take a look at the following resources:
+Please ensure your code follows the project's coding standards and includes relevant tests (if applicable).
+License
+This project is licensed under the MIT License.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
