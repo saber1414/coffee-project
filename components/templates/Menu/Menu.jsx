@@ -2,7 +2,6 @@ import MenuItem from "@/components/modules/MenuItem/MenuItem";
 import React from "react";
 
 const Menu = ({ menus }) => {
-  console.log(menus);
   return (
     <>
       <div className="container-fluid pt-5">
