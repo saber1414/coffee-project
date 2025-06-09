@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const MenuItem = ({ id, title, img, description, price }) => {
@@ -13,7 +14,7 @@ const MenuItem = ({ id, title, img, description, price }) => {
           <h5 className="menu-price">${price}</h5>
         </div>
         <div className="col-8 col-sm-9">
-          <h4>{title}</h4>
+          <Link href={`/product/${id}`}><h4>{title}</h4></Link>
           <p className="m-0">{description}</p>
         </div>
       </div>
