@@ -53,11 +53,6 @@ Example db.json structure:{
 }
 
 
-
-
-
-
-
 Running the Project
 
 Start the JSON Server:
